@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub Proyek | Rahmat Fatih Alkiromi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        accent: '#00d2ff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(190, 100%, 50%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(220, 100%, 50%, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: #f8fafc;
+        }
+
+        /* Efek kaca (Glassmorphism) untuk kotak link */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(0, 210, 255, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 210, 255, 0.2);
+        }
+
+        /* Animasi masuk berurutan */
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-item {
+            opacity: 0;
+            animation: slideUpFade 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+
+    <div class="w-full max-w-xl flex flex-col items-center animate-item" style="animation-delay: 0.1s;">
+        <!-- Ganti link placehold ini dengan foto aslimu -->
+        <div class="relative w-28 h-28 mb-4">
+            <div class="absolute inset-0 bg-accent rounded-full blur opacity-40 animate-pulse"></div>
+            <!-- Ganti bagian src di bawah ini sesuai dengan nama folder dan file foto lo -->
+            <img src="assets/img/foto-profil.jpg" alt="Fatih Profile" class="relative w-full h-full object-cover rounded-full border-2 border-accent shadow-lg">
+        </div>
+        
+        <h1 class="text-2xl font-bold tracking-tight text-white mb-1">Rahmat Fatih Alkiromi</h1>
+        <p class="text-slate-400 text-sm font-medium mb-8 text-center max-w-sm">
+            Medical Student & Tech Enthusiast.<br>Pusat akses seluruh platform & portofolio digital.
+        </p>
+    </div>
+
+    <div class="w-full max-w-xl space-y-4">
+        
+        <!-- ============================================================== -->
+        <!-- CARA NAMBAH TOMBOL:                                            -->
+        <!-- Kalau Web Latsol/Bot udah jadi, copas dari tag <a> sampai </a> -->
+        <!-- di bawah ini, lalu paste persis di bawahnya.                   -->
+        <!-- ============================================================== -->
+        
+        <!-- Tombol 1: Web Keuangan / Hasil -->
+        <a href="https://keuangan.alkiromi.my.id/" class="glass-card block w-full rounded-2xl p-4 flex items-center group animate-item" style="animation-delay: 0.2s;">
+            <!-- Ganti fa-chart-line dengan ikon font-awesome lain sesuai kebutuhan -->
+            <div class="bg-slate-800 text-accent rounded-full w-12 h-12 flex items-center justify-center text-xl mr-4 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-lg font-semibold text-white group-hover:text-accent transition-colors">Portal Keuangan & Hasil EB</h2>
+                <p class="text-sm text-slate-400">Pusat data, analisis keuangan, dan showcase.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-accent transition-colors"></i>
+        </a>
+
+    </div>
+
+    <div class="mt-12 flex gap-6 text-slate-400 animate-item" style="animation-delay: 0.3s;">
+        <a href="https://instagram.com/fatih_al_kiromi" class="hover:text-accent hover:-translate-y-1 transition-all text-2xl"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/fatihalkiromi016" class="hover:text-accent hover:-translate-y-1 transition-all text-2xl"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:fatihalkiromi016@gmail.com" class="hover:text-accent hover:-translate-y-1 transition-all text-2xl"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+
+</body>
+</html>
